@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 public class EmailSendService {
     private final MailgunClient mailgunClient;
 
-    public Response sendEmail() {
+    public String sendEmail() {
         SendMailForm form = SendMailForm.builder()
                 .from("zerobase-test.my.com")
                 .to("education.rhinokim.gmail.com")
@@ -19,7 +19,7 @@ public class EmailSendService {
                 .text("my text")
                 .build();
 
-        return mailgunClient.sendEmail(form);
+        return mailgunClient.sendEmail(form).getBody();
     }
 
 }

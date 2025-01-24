@@ -1,6 +1,8 @@
 package com.zerobase.user.client.service;
 
+import com.zerobase.user.config.FeignConfig;
 import com.zerobase.user.service.EmailSendService;
+import feign.Response;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -13,7 +15,8 @@ class EmailSendServiceTest {
 
     @Test
     public void EmailTest() {
-        emailSendService.sendEmail();
+        String response = emailSendService.sendEmail();
+        System.out.println(response);
     }
 
 }
