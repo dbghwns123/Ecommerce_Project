@@ -4,4 +4,6 @@ plugins {
 rootProject.name = 'ecommerce_project'
 include 'user-api'
 //include 'ecommerce_project'
+include 'untitled'
+include 'zerobase-domain'
 
